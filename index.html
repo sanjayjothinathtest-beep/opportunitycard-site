@@ -12,21 +12,23 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <!-- Logo image from assets folder -->
-        <!-- If your file is Logo.jpg instead of Logo.png, just change the extension below -->
-        <img src="assets/Logo.png" alt="OpportunityCard.in logo" class="logo-img" />
+        <!-- Logo image -->
+        <img src="Assets/Logo.png" alt="OpportunityCard.in logo" class="logo-img" />
         <div class="logo-text">
           <span class="logo-main">OpportunityCard.in</span>
         </div>
       </a>
       <nav class="nav-links">
         <a href="#about">About</a>
+        <a href="#features">Features</a>
         <a href="#pathways">Pathways</a>
+        <a href="#requirements">Requirements</a>
         <a href="#process">Process</a>
         <a href="#why">Why Us</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="#calculator" class="btn btn-dark nav-cta">
+      <!-- Top CTA: goes to DEIN Talents site -->
+      <a href="https://deintalents.com/" class="btn btn-dark nav-cta">
         <span>🧮</span> Check Eligibility
       </a>
     </div>
@@ -36,8 +38,7 @@
   <section id="hero" class="hero">
     <div class="hero-bg-overlay"></div>
     <!-- Hero background image -->
-    <!-- Change to BG1.jpg if needed -->
-    <div class="hero-image" style="background-image:url('assets/BG1.png');"></div>
+    <div class="hero-image" style="background-image:url('Assets/BG1.png');"></div>
 
     <div class="hero-content container">
       <div class="hero-pill">
@@ -54,10 +55,12 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#calculator" class="btn btn-primary hero-btn">
+        <!-- Goes to DEIN Talents form -->
+        <a href="https://deintalents.com/opportunity_card_form" class="btn btn-primary hero-btn">
           🧮 Calculate Your Points
         </a>
-        <a href="#about" class="btn btn-ghost hero-btn">
+        <!-- Scroll to HOW TO QUALIFY section -->
+        <a href="#pathways" class="btn btn-ghost hero-btn">
           ▶ How it Works
         </a>
       </div>
@@ -70,8 +73,7 @@
       <div class="split-left">
         <div class="card illustration-card">
           <!-- Illustration image -->
-          <!-- Change to Img2.jpg if needed -->
-          <div class="illustration-img" style="background-image:url('assets/Img2.png');"></div>
+          <div class="illustration-img" style="background-image:url('Assets/Img2.png');"></div>
           <div class="badge-floating">
             <div class="badge-icon">📅</div>
             <div class="badge-text">
@@ -108,8 +110,8 @@
     </div>
   </section>
 
-  <!-- Why Choose the Opportunity Card -->
-  <section class="section section-verylight">
+  <!-- Why Choose the Opportunity Card (Features) -->
+  <section id="features" class="section section-verylight">
     <div class="container">
       <h2 class="section-title center">Why Choose the Opportunity Card?</h2>
       <p class="section-subtitle center">
@@ -209,45 +211,63 @@
             <li>✅ Flexible qualification</li>
             <li>✅ Most professionals qualify</li>
           </ul>
-          <a href="#calculator" class="btn btn-primary full">Check My Points</a>
+          <a href="https://deintalents.com/opportunity_card_form" class="btn btn-primary full">Check My Points</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Key Requirements -->
+  <!-- Key Requirements (visually enhanced) -->
   <section id="requirements" class="section section-verylight">
     <div class="container">
       <h2 class="section-title center">Key Requirements</h2>
 
       <div class="requirements-grid">
         <div class="requirement-item">
-          <span class="req-number">1</span>
+          <div class="req-header">
+            <span class="req-number">1</span>
+            <span class="req-tag">Education</span>
+          </div>
           <h3>Educational Qualification</h3>
           <p>University degree or recognized vocational training equivalent to German standards.</p>
         </div>
         <div class="requirement-item">
-          <span class="req-number">2</span>
+          <div class="req-header">
+            <span class="req-number">2</span>
+            <span class="req-tag">Language</span>
+          </div>
           <h3>Language Skills</h3>
-          <p>German (A1 minimum) or English (B2 level) with certified proof.</p>
+          <p>German (A1 minimum) or English (B2 level) language proficiency with certified proof.</p>
         </div>
         <div class="requirement-item">
-          <span class="req-number">3</span>
+          <div class="req-header">
+            <span class="req-number">3</span>
+            <span class="req-tag">Points</span>
+          </div>
           <h3>Points Score</h3>
           <p>Minimum 6 points from the scoring system (age, qualifications, experience, language).</p>
         </div>
         <div class="requirement-item">
-          <span class="req-number">4</span>
+          <div class="req-header">
+            <span class="req-number">4</span>
+            <span class="req-tag">Funds</span>
+          </div>
           <h3>Financial Proof</h3>
           <p>Sufficient funds to support yourself (~€1,091/mo) and family during the search period.</p>
         </div>
         <div class="requirement-item">
-          <span class="req-number">5</span>
+          <div class="req-header">
+            <span class="req-number">5</span>
+            <span class="req-tag">Insurance</span>
+          </div>
           <h3>Health Insurance</h3>
           <p>Valid health insurance coverage for Germany from day one of your stay.</p>
         </div>
         <div class="requirement-item">
-          <span class="req-number">6</span>
+          <div class="req-header">
+            <span class="req-number">6</span>
+            <span class="req-tag">Compliance</span>
+          </div>
           <h3>Clean Record</h3>
           <p>No criminal background and full compliance with German immigration laws.</p>
         </div>
@@ -407,7 +427,8 @@
           support, DEIN Talents provides end-to-end guidance for your Germany journey.
           From initial assessment to successful settlement, we're with you every step of the way.
         </p>
-        <a href="#faq" class="btn btn-primary hero-btn">Get in touch with us →</a>
+        <!-- Goes to DEIN Talents main site -->
+        <a href="https://deintalents.com/" class="btn btn-primary hero-btn">Get in touch with us →</a>
       </div>
 
       <div class="why-right">
@@ -437,8 +458,57 @@
     </div>
   </section>
 
-  <!-- Final CTA / FAQ Placeholder -->
-  <section id="faq" class="section section-verylight">
+  <!-- FAQ Section -->
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <h2 class="section-title center">Frequently Asked Questions</h2>
+      <p class="section-subtitle center">
+        Clear answers to the most common questions about Germany’s Opportunity Card.
+      </p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What is the total cost for the Opportunity Card?</h3>
+          <p>
+            There are two main costs: (1) the visa application fee (approx. €75) and
+            (2) the mandatory proof of funds, which is a Blocked Account of approx.
+            €11,904 for the year. This money is still yours; it just proves you can
+            support yourself.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I bring my family (spouse/children) with me on the Opportunity Card?</h3>
+          <p>
+            No, the Opportunity Card is for the primary applicant only. However, once
+            you find a qualified job and convert your visa to a work permit, you can
+            immediately apply for a family reunion visa.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What kind of job do I need to find in Germany?</h3>
+          <p>
+            To convert your visa, you must find “qualified employment.” This generally
+            means a full-time job that matches your university degree or vocational
+            training and meets a certain salary level.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What if I don't find a job in one year?</h3>
+          <p>
+            The Opportunity Card is issued for one year to find a job. If you have a
+            binding job offer, it can be extended for up to two more years, giving you
+            ample time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="cta" class="section section-verylight">
     <div class="container center">
       <h2 class="section-title">Ready to Explore Your Opportunity Card?</h2>
       <p class="section-subtitle">
@@ -446,8 +516,12 @@
         preparation to language training and job search in Germany.
       </p>
       <div class="hero-actions center-actions">
-        <a href="#calculator" class="btn btn-primary hero-btn">Start Eligibility Check</a>
-        <a href="mailto:info@deintalents.com" class="btn btn-ghost hero-btn">Contact Our Team</a>
+        <a href="https://deintalents.com/opportunity_card_form" class="btn btn-primary hero-btn">
+          Start Eligibility Check
+        </a>
+        <a href="https://deintalents.com/contact" class="btn btn-ghost hero-btn">
+          Contact Our Team
+        </a>
       </div>
     </div>
   </section>
@@ -455,12 +529,24 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> OpportunityCard.in. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Imprint</a>
-        <a href="#">Data Protection</a>
-        <a href="#">Terms</a>
+      <div class="footer-col">
+        <h4>Contact Information</h4>
+        <p>📧 <a href="mailto:admin@deintalents.com">admin@deintalents.com</a></p>
+        <p>
+          📍 Buchenweg 21, 61440, Oberursel<br />
+          Deutschland
+        </p>
       </div>
+      <div class="footer-col">
+        <h4>Follow Updates</h4>
+        <p>
+          Stay informed about the latest changes to Germany's Opportunity Card program
+          and immigration policies.
+        </p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> OpportunityCard.in. All rights reserved.</p>
     </div>
   </footer>
 </body>
