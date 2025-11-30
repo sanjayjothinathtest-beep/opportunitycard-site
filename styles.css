@@ -12,7 +12,6 @@
   --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.1);
   --radius-lg: 24px;
   --radius-xl: 32px;
-  --radius-pill: 999px;
   --transition: all 0.2s ease;
   --font: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
 }
@@ -109,22 +108,15 @@ body {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
   color: inherit;
 }
 
-.logo-circle {
-  width: 36px;
+.logo-img {
   height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #fff;
-  background: linear-gradient(135deg, #111827, #4b5563);
+  width: 36px;
+  object-fit: contain;
+  margin-right: 0.75rem;
 }
 
 .logo-text {
@@ -136,15 +128,6 @@ body {
 .logo-main {
   font-weight: 700;
   font-size: 1rem;
-}
-
-.logo-main span {
-  color: var(--primary);
-}
-
-.logo-sub {
-  font-size: 0.7rem;
-  color: var(--text-muted);
 }
 
 .nav-links {
@@ -703,45 +686,53 @@ input[type="range"]:focus {
   color: #bfdbfe;
 }
 
-/* Timeline */
+/* Alternate Timeline */
 
-.timeline {
+.timeline-alt {
   position: relative;
-  margin-top: 2.5rem;
-  padding-left: 1.2rem;
+  margin: 2.5rem 0;
+  padding: 0;
 }
 
-.timeline::before {
+.timeline-alt::before {
   content: "";
   position: absolute;
-  left: 1.2rem;
-  top: 0.4rem;
+  left: 50%;
+  top: 0;
   bottom: 0;
   width: 2px;
-  background: #e5e7eb;
+  background: var(--border-soft);
+  transform: translateX(-50%);
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 2.5rem;
-  margin-bottom: 1.8rem;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.1rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  border-radius: 999px;
-  background: #eff4ff;
-  border: 2px solid var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--primary);
+.timeline-item.alt {
+  left: 0;
+}
+
+.timeline-item:not(.alt) {
+  left: 50%;
+}
+
+.timeline-item .timeline-content {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.timeline-item.alt .timeline-content {
+  margin-right: 2rem;
+}
+
+.timeline-item:not(.alt) .timeline-content {
+  margin-left: 2rem;
 }
 
 .timeline-content h3 {
@@ -753,6 +744,75 @@ input[type="range"]:focus {
   margin: 0;
   font-size: 0.92rem;
   color: var(--text-muted);
+}
+
+/* Why DEIN Talents */
+
+.section-why-dark {
+  position: relative;
+  color: #ffffff;
+  background: radial-gradient(circle at top left, #0b1220, #020617);
+  overflow: hidden;
+}
+
+.why-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.35), transparent);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.why-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.why-left {
+  min-width: 0;
+}
+
+.why-right {
+  min-width: 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.why-card {
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 20px;
+  padding: 1.3rem 1.3rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+}
+
+.why-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.why-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+}
+
+.why-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e5e7eb;
 }
 
 /* Footer */
@@ -809,6 +869,28 @@ input[type="range"]:focus {
   .two-col {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .why-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item,
+  .timeline-item.alt {
+    width: 100%;
+    left: 0 !important;
+    padding: 1rem 1rem;
+  }
+
+  .timeline-alt::before {
+    left: 20px;
+  }
+
+  .timeline-item .timeline-content {
+    margin: 0 0 0.5rem !important;
+    margin-left: 1.8rem !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -822,5 +904,9 @@ input[type="range"]:focus {
 
   .path-card {
     border-radius: 22px;
+  }
+
+  .why-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
