@@ -133,7 +133,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   font-size: 0.95rem;
 }
 
@@ -496,20 +496,71 @@ body {
   color: var(--text-muted);
 }
 
-/* Requirements */
+/* Requirements – visually enhanced */
 
 .requirements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+  margin-top: 2.5rem;
 }
 
 .requirement-item {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 1.4rem 1.4rem 1.3rem;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  background: radial-gradient(circle at top left, #ffffff, #eef3ff);
+  border-radius: 26px;
+  padding: 1.6rem 1.6rem 1.5rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.requirement-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.requirement-item:hover::after {
+  opacity: 1;
+}
+
+.requirement-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+}
+
+.req-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.req-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.req-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .requirement-item h3 {
@@ -521,20 +572,6 @@ body {
   margin: 0;
   font-size: 0.92rem;
   color: var(--text-muted);
-}
-
-.req-number {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  background: #eff4ff;
-  color: var(--primary);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
 }
 
 /* Calculator */
@@ -815,35 +852,76 @@ input[type="range"]:focus {
   color: #e5e7eb;
 }
 
+/* FAQ */
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.4rem 1.5rem 1.3rem;
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+}
+
+.faq-item h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
 /* Footer */
 
 .footer {
-  padding: 1.5rem 0 2rem;
+  padding: 2.2rem 0 1.4rem;
   background: #f3f4f6;
   border-top: 1px solid #e5e7eb;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
-.footer-links {
-  display: flex;
-  gap: 1rem;
+.footer-col h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-.footer-links a {
-  color: #6b7280;
+.footer-col p {
+  margin: 0.1rem 0;
+}
+
+.footer-col a {
+  color: inherit;
   text-decoration: none;
 }
 
-.footer-links a:hover {
+.footer-col a:hover {
   text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.9rem;
 }
 
 /* Responsive */
@@ -890,6 +968,12 @@ input[type="range"]:focus {
   .timeline-item .timeline-content {
     margin: 0 0 0.5rem !important;
     margin-left: 1.8rem !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
   }
 }
 
