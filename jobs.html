@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Immediate Jobs in Germany | OpportunityCard.in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Immediate hiring opportunities in Germany for skilled professionals." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css" />
+  <script src="script1.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index1.html" class="logo">
+        <img src="assets/Logo.png" alt="OpportunityCard.in logo" class="logo-image" />
+        <span class="logo-text">OpportunityCard<span class="text-highlight">.in</span></span>
+      </a>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index1.html#about">About</a></li>
+          <li><a href="index1.html#why-germany">Background</a></li>
+          <li><a href="index1.html#features">Features</a></li>
+          <li><a href="index1.html#modern-system">Comparison</a></li>
+          <li><a href="index1.html#it-professionals">IT Professionals</a></li>
+          <li><a href="index1.html#requirements">Requirements</a></li>
+          <li><a href="index1.html#process">Timeline</a></li>
+          <li><a href="index1.html#faq">FAQ</a></li>
+          <li><a href="index1.html#calculator">Calculator</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index1.html#calculator" class="btn btn-primary header-cta">Check Eligibility</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-kicker text-center">Career Opportunities</p>
+        <h1 class="section-title text-center">Immediate Hiring in Germany</h1>
+        <p class="section-subtitle text-center">Explore current openings and apply directly.</p>
+        
+        <div class="job-grid">
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>Immediate Hiring – Germany</h3>
+                    <div class="job-tag">Hot Job 🔥</div>
+                </div>
+                <div class="job-body">
+                    <h4 class="job-role">Role: Engineering Technicians (Electrical/Mechanical)</h4>
+                    <p class="job-desc">Work on electro-mechanical, power, cooling & automation systems. Routine checks, troubleshooting & maintenance.</p>
+                    
+                    <div class="job-reqs">
+                        <h5>Eligibility:</h5>
+                        <ul>
+                            <li>Diploma/Degree in relevant field</li>
+                            <li>Industrial system experience</li>
+                            <li>Good English proficiency</li>
+                            <li>Physically fit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job-footer">
+                    <button class="btn btn-primary btn-block open-job-modal">Apply Now!</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="applicationModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Job Application</h3>
+        
+        <form class="app-form" action="https://formsubmit.co/info@deintalents.com" method="POST" enctype="multipart/form-data">
+            
+            <input type="hidden" name="_subject" value="New Job Application: Engineering Technician">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" class="modal-input" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Current Age</label>
+                    <input type="number" name="age" class="modal-input" placeholder="Age" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone No.</label>
+                    <input type="tel" name="phone" class="modal-input" placeholder="+91..." required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="modal-input" placeholder="example@mail.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Job Applying For?</label>
+                <input type="text" name="job_role" class="modal-input" value="Engineering Technician" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Highest Education Qualification</label>
+                <select name="education" class="modal-input" required>
+                    <option value="" disabled selected>Select your highest qualification</option>
+                    <option value="12th Pass">12th Pass</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Undergraduate_Tech">Undergraduate (B.E./B.Tech)</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>English Proficiency</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="eng_prof" value="Conversational" required> Conversational</label>
+                    <label class="radio-label"><input type="radio" name="eng_prof" value="Written"> Written</label>
+                    <label class="radio-label"><input type="radio" name="eng_prof" value="Fluent"> Fluent</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>German Proficiency</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="ger_prof" value="A2_lower" required> &lt;= A2</label>
+                    <label class="radio-label"><input type="radio" name="ger_prof" value="B1"> B1</label>
+                    <label class="radio-label"><input type="radio" name="ger_prof" value="B2"> B2</label>
+                    <label class="radio-label"><input type="radio" name="ger_prof" value="C1"> C1</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Willing to undergo German language training if required?</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="training" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="training" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" name="city" class="modal-input" required>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" name="state" class="modal-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Pin Code</label>
+                    <input type="text" name="pincode" class="modal-input" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Upload CV (PDF/Doc)</label>
+                <input type="file" name="cv" class="modal-input" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="check-label">
+                    <input type="checkbox" name="consent" required>
+                    I agree to receive phone and email communication from DEIN Talents.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>OpportunityCard<span class="text-highlight">.in</span></h3>
+        <p>Connecting ambitious individuals with the right opportunities.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Powered by DEIN Talents</p>
+        <p><a href="mailto:info@deintalents.com">info@deintalents.com</a></p>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>© 2025 OpportunityCard.in. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
