@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css" />
-  <script src="/script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -83,115 +83,30 @@
     </section>
   </main>
 
-  <div id="applicationModal" class="modal-overlay">
-    <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <h3 class="modal-title">Job Application</h3>
+<div id="applicationModal" class="modal-overlay">
+    
+    <div class="modal-content" style="padding: 0; width: 95%; max-width: 700px; height: 90vh; max-height: 900px; background: white; border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; position: relative;">
         
-        <form class="app-form" action="https://formsubmit.co/info@deintalents.com" method="POST" enctype="multipart/form-data">
-            
-            <input type="hidden" name="_subject" value="New Job Application: Engineering Technician">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="name" class="modal-input" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label>Current Age</label>
-                    <input type="number" name="age" class="modal-input" placeholder="Age" required>
-                </div>
-            </div>
+        <div style="height: 50px; min-height: 50px; display: flex; justify-content: flex-end; align-items: center; padding: 0 15px; border-bottom: 1px solid #f0f0f0; background: #fff;">
+            <button class="modal-close" style="background: none; border: none; font-size: 28px; line-height: 1; cursor: pointer; color: #333; position: static;">&times;</button>
+        </div>
+        
+        <div style="flex-grow: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; width: 100%;">
+            <iframe 
+                data-tally-src="https://tally.so/embed/PdpVVb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                loading="lazy" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                title="Job application">
+            </iframe>
+        </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Phone No.</label>
-                    <input type="tel" name="phone" class="modal-input" placeholder="+91..." required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" class="modal-input" placeholder="example@mail.com" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Job Applying For?</label>
-                <input type="text" name="job_role" class="modal-input" value="Engineering Technician" readonly>
-            </div>
-
-            <div class="form-group">
-                <label>Highest Education Qualification</label>
-                <select name="education" class="modal-input" required>
-                    <option value="" disabled selected>Select your highest qualification</option>
-                    <option value="12th Pass">12th Pass</option>
-                    <option value="Diploma">Diploma</option>
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="Undergraduate_Tech">Undergraduate (B.E./B.Tech)</option>
-                    <option value="Postgraduate">Postgraduate</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>English Proficiency</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="eng_prof" value="Conversational" required> Conversational</label>
-                    <label class="radio-label"><input type="radio" name="eng_prof" value="Written"> Written</label>
-                    <label class="radio-label"><input type="radio" name="eng_prof" value="Fluent"> Fluent</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>German Proficiency</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="ger_prof" value="A2_lower" required> &lt;= A2</label>
-                    <label class="radio-label"><input type="radio" name="ger_prof" value="B1"> B1</label>
-                    <label class="radio-label"><input type="radio" name="ger_prof" value="B2"> B2</label>
-                    <label class="radio-label"><input type="radio" name="ger_prof" value="C1"> C1</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Willing to undergo German language training if required?</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="training" value="Yes" required> Yes</label>
-                    <label class="radio-label"><input type="radio" name="training" value="No"> No</label>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>City</label>
-                    <input type="text" name="city" class="modal-input" required>
-                </div>
-                <div class="form-group">
-                    <label>State</label>
-                    <input type="text" name="state" class="modal-input" required>
-                </div>
-                <div class="form-group">
-                    <label>Pin Code</label>
-                    <input type="text" name="pincode" class="modal-input" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Upload CV (PDF/Doc)</label>
-                <input type="file" name="cv" class="modal-input" accept=".pdf,.doc,.docx" required>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <label class="check-label">
-                    <input type="checkbox" name="consent" required>
-                    I agree to receive phone and email communication from DEIN Talents.
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
-        </form>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </div>
   </div>
-
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -211,4 +126,3 @@
 
 </body>
 </html>
-
