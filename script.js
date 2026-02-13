@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", (e) => {
       // Toggle class for CSS display block
       mainNav.classList.toggle("active");
+      navToggle.setAttribute("aria-expanded", mainNav.classList.contains("active") ? "true" : "false");
       e.stopPropagation();
     });
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
           !mainNav.contains(e.target) && 
           !navToggle.contains(e.target)) {
         mainNav.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
       }
     });
 
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mainNav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         mainNav.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
       });
     });
   }
@@ -170,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 20px;">
                 EU/EEA/Swiss citizens don't need a visa to work in Germany!
               </p>
-              <a href="https://deintalents.com/contact" target="_blank" class="btn btn-primary" style="width:100%; font-size: 0.85rem;">Explore Opportunities</a>
+              <a href="https://deintalents.com/contact" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%; font-size: 0.85rem;">Explore Opportunities</a>
                <button type="button" class="btn btn-ghost" id="resetBtn" style="width:100%; margin-top:20px; font-size: 0.8rem; opacity: 0.7;">↺ Reset Options</button>
             </div>
           `;
@@ -205,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 20px;">
                  Your qualification is fully recognized. You skip the points system!
                </p>
-               <a href="https://deintalents.com/contact" target="_blank" class="btn btn-primary" style="width:100%; font-size: 0.85rem;">Apply Now</a>
+               <a href="https://deintalents.com/contact" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%; font-size: 0.85rem;">Apply Now</a>
                <button type="button" class="btn btn-ghost" id="resetBtn" style="width:100%; margin-top:20px; font-size: 0.8rem; opacity: 0.7;">↺ Reset Options</button>
             </div>
           `;
@@ -329,6 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const item = btn.parentElement;
       item.classList.toggle("active");
+      btn.setAttribute("aria-expanded", item.classList.contains("active") ? "true" : "false");
     });
   });
   
